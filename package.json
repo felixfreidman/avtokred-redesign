@@ -1,0 +1,54 @@
+{
+  "name": "freidman",
+  "version": "1.0.0",
+  "description": "studio web site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build",
+    "start": "npm run build"
+  },
+  "author": "T-code",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "autoprefixer": "^8.0.0",
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csscomb": "^3.1.0",
+    "gulp-csso": "^3.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-include": "^2.3.1",
+    "gulp-newer": "^1.4.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-posthtml": "^3.0.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-svgstore": "^7.0.1",
+    "gulp-uglify": "^3.0.2",
+    "gulp-wait": "0.0.2",
+    "gulp-webp": "^4.0.1",
+    "gulp.spritesmith": "^6.10.1",
+    "postcss-css-variables": "^0.13.0",
+    "posthtml-include": "^1.4.0",
+    "run-sequence": "^2.2.1",
+    "vinyl-buffer": "^1.0.1"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ],
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "jquery-mask-plugin": "^1.14.16",
+    "swiper": "^4.5.0",
+    "@fancyapps/fancybox": "3.5.2"
+  }
+}

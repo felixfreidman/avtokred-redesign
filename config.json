@@ -1,0 +1,61 @@
+{
+	"build": {
+	    "html": "build/",
+	    "js": "build/assets/js/",
+		"css": "build/",
+		"imgBase": "src/assets/images/",
+	    "img": "build/assets/images/",
+	    "fonts": "build/assets/fonts/",
+	    "sprites": "build/assets/sprites/"
+	},
+	"src": {
+	    "html": "src/html/*.html",
+	    "js": {
+	    	"separate": "src/assets/js/separate/*.js",
+	    	"libs": "src/assets/js/libs/*.js",
+	    	"plugins": "src/assets/js/plugins/*.js",
+	    	"components": "src/assets/js/components/*.js"
+	    },
+	    "styleBase": "src/assets/styles/",
+	    "style": "src/assets/styles/style.scss",
+	    "imgBase": "src/assets/images/",
+	    "img": [
+	    	"src/assets/images/static/*.{png,jpg,svg,gif}",
+	    	"src/assets/images/nofollow/*.{png,jpg,svg,gif}",
+	    	"src/assets/images/content/*.{png,jpg,svg,gif}"
+	    ],
+	    "sprite": {
+	    	"svg": "src/assets/images/sprite/svg/*.svg",
+	    	"png": "src/assets/images/sprite/png/*.png"
+	    },
+	    "fonts": "src/assets/fonts/*.*"
+	},
+	"watch": {
+	    "html": "src/html/**/*.html",
+	    "js": {
+	    	"separate": "src/assets/js/separate/*.js",
+	    	"components": "src/assets/js/components/*.js",
+	    	"libs": "src/assets/js/libs/*.js",
+	    	"plugins": "src/assets/js/plugins/*.js"
+	    },
+	    "style": "src/assets/styles/**/*.scss",
+	    "img": "src/assets/images/**/*.*",
+	    "sprite": {
+	    	"svg": "src/assets/images/sprite/svg/*.svg",
+	    	"png": "src/assets/images/sprite/svg/*.png"
+	    },
+	    "fonts": "src/assets/fonts/**/*.*"
+	},
+	"clean": "./build",
+	"server": {
+		"server": {
+	        "baseDir": "./build"
+		},
+	    "notify": false,
+	    "open": true,
+	    "cors": true,
+	    "ui": false,
+	    "host": "localhost",
+	    "port": 3000
+	}
+}

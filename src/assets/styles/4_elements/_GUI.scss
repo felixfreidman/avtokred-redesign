@@ -1,0 +1,134 @@
+// // туц
+
+// .header__phone {
+//     margin-left: 5px;
+// }
+
+// .btn {
+//     border: none;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+
+//     &:hover {
+//         cursor: pointer;
+//     }
+// }
+
+// .btn-gray {
+//     background: #F3F3F3;
+//     color: $orange;
+//     text-transform: uppercase;
+//     // border-radius: 4px;
+//     font-weight: 700;
+// }
+
+// .btn-season {
+//     width: 20px;
+//     height: 20px;
+//     border-radius: 4px;
+//     padding: 2px;
+// }
+
+// .btn-orange {
+//     background: $orange;
+//     color: $white;
+//     text-transform: uppercase;
+//     border-radius: 4px;
+
+    
+//     &:hover{
+//         cursor: pointer;
+//         box-shadow: 4px 3px 49px -12px $orange;
+//     }
+// }
+
+// .btn-white {
+//     background: $white;
+//     color: $orange;
+//     text-transform: uppercase;
+    
+// }
+
+// .label {
+//     background: $label;
+//     font-size: 12px;
+//     margin-top: 15px;
+//     margin-bottom: 15px;
+//     height: 31px;
+//     padding: 0 16px;
+//     letter-spacing: normal;
+//     display: flex;
+//     align-items: center;
+//     margin-left: -27px;
+//     width: max-content;
+//     font-weight: 600;
+//     text-transform: uppercase;
+//     position: relative;
+
+//     &-gray {
+//         background: #ECECEC;
+//         color: #3B3B3A;
+
+//         &:before {
+//             content: '';
+//             position: absolute;
+//             width: 0;
+//             height: 0;
+//             border-top: 11px solid #9E9E9E;
+//             border-left: 21px solid transparent;
+//             left: 0;
+//             bottom: -11px;
+//             z-index: -1;
+//         }
+//     }
+// }
+
+
+// @media (min-width: $tablet) {
+ 
+//     .label {
+
+//         &-gray {
+//             background: #ECECEC;
+//             color: #3B3B3A;
+    
+//             &:before {
+//                 content: none;
+//             }
+//         }
+//     }
+
+
+// }
+
+// @media (min-width: $notebook) {
+ 
+//     .label {
+
+//         &::before {
+//             content: '';
+//             position: absolute;
+//             width: 0;
+//             height: 0;
+//             border-top: 11px solid #0B3675;
+//             border-left: 21px solid transparent;
+//             left: 0;
+//             bottom: -11px;
+//             z-index: -1;
+//         }
+
+//         &-gray {
+//             background: #ECECEC;
+//             color: #3B3B3A;
+    
+//             &:before {
+//                 border-top: 11px solid #9E9E9E;
+//             }
+//         }
+//     }
+
+
+// }
+
+

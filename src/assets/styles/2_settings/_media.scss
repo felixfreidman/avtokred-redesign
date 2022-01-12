@@ -1,0 +1,19 @@
+$mobile: (
+  'sm': 320px,
+  'md': 375px,
+  'lg': 420px,
+);
+
+$tablet: (
+  'sm': 640px,
+  'md': 768px,
+  'lg': 1024px,
+);
+
+$laptop: (
+  'sm': 1280px,
+  'md': 1440px,
+  'lg': 1680px,
+);
+
+// @media (max-width: map-get($laptop, sm) - 1) {};

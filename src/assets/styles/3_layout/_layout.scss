@@ -1,0 +1,117 @@
+// .row {
+//     width: 100%;
+//     display: flex;
+//     flex-wrap: wrap;
+// }
+
+// main {
+// 	position: relative;
+// }
+
+
+// @for $i from 1 to 25 {
+// 	.col-#{$i} {
+// 		width: #{100% / 24 * $i};
+// 	}
+// }
+
+// .row {
+// 	display: flex;
+// 	flex-wrap: wrap;
+
+// 	// &--offset {
+// 	// 	margin-left: -10px;
+// 	// 	margin-right: -10px;
+// 	// }
+// }
+// .container {
+//     max-width: 1440px;
+//     width: 100%;
+//     margin-left: auto;
+//     margin-right: auto;
+// }
+
+// @for $i from 1 to 25 {
+// 	.col-#{$i} {
+// 		width: #{100% / 24 * $i};
+// 	}
+// 	.offset-#{$i} {
+// 		margin-left: #{100% / 24 * $i};
+// 	}
+// }
+
+// @media (min-width: $mobile) {
+
+// 	@for $i from 1 to 25 {
+// 		.col-#{$i}-xs {
+// 			width: #{100% / 24 * $i};
+// 		}
+// 		.offset-#{$i}-xs {
+// 			margin-left: #{100% / 24 * $i};
+// 		}
+// 	}
+
+// 	.section {
+// 		margin-bottom: 27px;
+// 	}
+// }
+
+// @media (min-width: $tablet) {
+
+// 	@for $i from 1 to 25 {
+// 		.col-#{$i}-sm {
+// 			width: #{100% / 24 * $i};
+// 		}
+// 		.offset-#{$i}-sm {
+// 			margin-left: #{100% / 24 * $i};
+// 		}
+// 	}
+
+
+// 	.section {
+// 		margin-bottom: 40px;
+// 	}
+// }
+
+// @media (min-width: $notebook) {
+
+// 	@for $i from 1 to 25 {
+// 		.col-#{$i}-nb {
+// 			width: #{100% / 24 * $i};
+// 		}
+
+// 		.offset-#{$i}-nb {
+// 			margin-left: #{100% / 24 * $i};
+// 		}
+// 	}
+// }
+
+// @media (min-width: $old) {
+
+// 	@for $i from 1 to 25 {
+// 		.col-#{$i}-old {
+// 			width: #{100% / 24 * $i};
+// 		}
+
+// 		.offset-#{$i}-old {
+// 			margin-left: #{100% / 24 * $i};
+// 		}
+// 	}
+// }
+
+// @media (min-width: $hd) {
+
+//     .section {
+// 		margin-bottom: 80px;
+// 	}
+
+// 	@for $i from 1 to 25 {
+// 		.col-#{$i}-hd {
+// 			width: #{100% / 24 * $i};
+// 		}
+
+// 		.offset-#{$i}-hd {
+// 			margin-left: #{100% / 24 * $i};
+// 		}
+// 	}
+// }

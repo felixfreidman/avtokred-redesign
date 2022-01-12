@@ -1,0 +1,64 @@
+{
+	"build": {
+	    "php": "wp/wp-content/themes/имя_вашей_темы/",
+	    "html": "wp/wp-content/themes/имя_вашей_темы/html/",
+	    "js": "wp/wp-content/themes/имя_вашей_темы/assets/js/",
+		"css": "wp/wp-content/themes/имя_вашей_темы/",
+		"imgBase": "src/assets/images/",
+	    "img": "wp/wp-content/themes/имя_вашей_темы/assets/images/",
+	    "fonts": "wp/wp-content/themes/имя_вашей_темы/assets/fonts/",
+	    "sprites": "wp/wp-content/themes/имя_вашей_темы/assets/sprites/"
+	},
+	"src": {
+	    "php": "src/php/**/*.php",
+	    "html": "src/html/**/*.html",
+	    "js": {
+	    	"separate": "src/assets/js/separate/*.js",
+	    	"libs": "src/assets/js/libs/*.js",
+	    	"plugins": "src/assets/js/plugins/*.js",
+	    	"components": "src/assets/js/components/*.js"
+	    },
+	    "styleBase": "src/assets/styles/",
+	    "style": "src/assets/styles/style.scss",
+	    "imgBase": "src/assets/images/",
+	    "img": [
+	    	"src/assets/images/static/*.{png,jpg,svg,gif}",
+	    	"src/assets/images/nofollow/*.{png,jpg,svg,gif}",
+	    	"src/assets/images/content/*.{png,jpg,svg,gif}"
+	    ],
+	    "sprite": {
+	    	"svg": "src/assets/images/sprite/svg/*.svg",
+	    	"png": "src/assets/images/sprite/png/*.png"
+	    },
+	    "fonts": "src/assets/fonts/*.*"
+	},
+	"watch": {
+	    "html": "src/html/**/*.html",
+	    "php": "src/php/**/*.php",
+	    "js": {
+	    	"separate": "src/assets/js/separate/*.js",
+	    	"components": "src/assets/js/components/*.js",
+	    	"libs": "src/assets/js/libs/*.js",
+	    	"plugins": "src/assets/js/plugins/*.js"
+	    },
+	    "style": "src/assets/styles/**/*.scss",
+	    "img": "src/assets/images/**/*.*",
+	    "sprite": {
+	    	"svg": "src/assets/images/sprite/svg/*.svg",
+	    	"png": "src/assets/images/sprite/svg/*.png"
+	    },
+	    "fonts": "src/assets/fonts/**/*.*"
+	},
+	"clean": "./wp/wp-content/themes/имя_вашей_темы",
+	"server": {
+		"server": {
+	        "baseDir": "./wp/wp-content/themes/имя_вашей_темы"
+		},
+	    "notify": false,
+	    "open": true,
+	    "cors": true,
+	    "ui": false,
+	    "host": "localhost",
+	    "port": 3000
+	}
+}
