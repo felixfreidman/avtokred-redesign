@@ -61,69 +61,70 @@ AOS.init({
     startEvent: "DOMContentLoaded",
 });
 
-// Main Menu Section
+// // Main Menu Section
 
-const dinamicMenu = document.getElementById("wrapperContent");
-const menuFirstRow = document.getElementById("navigationFirstRow");
-const menuSecondRow = document.getElementById("navigationSecondRow");
-const navigationContainer = document.getElementById("navigationContainer");
-const menuMiniRow = document.getElementById("navigationRowMini");
-const formButton = document.getElementById("formButton");
-const formContainer = document.getElementById("formContainer");
-const aboutButton = document.getElementById("aboutButton");
-const aboutContainer = document.getElementById("aboutContainer");
-const banksButton = document.getElementById("banksButton");
-const banksContainer = document.getElementById("banksContainer");
-const whyusButton = document.getElementById("whyusButton");
-const whyusContainer = document.getElementById("whyusContainer");
-const faqButton = document.getElementById("faqButton");
-const formActivationButton = document.getElementById("formActivation");
-formButton.addEventListener("click", () => {
-    if (!formButton.classList.contains("formExpansion")) {
-        formButton.classList.add("formExpansion");
-        formContainer.classList.add("formContainerExpansion");
-        menuSecondRow.classList.add("rowResize");
-    }
-});
+// const dinamicMenu = document.getElementById("wrapperContent");
+// const menuFirstRow = document.getElementById("navigationFirstRow");
+// const menuSecondRow = document.getElementById("navigationSecondRow");
+// const navigationContainer = document.getElementById("navigationContainer");
+// const menuMiniRow = document.getElementById("navigationRowMini");
+// const formButton = document.getElementById("formButton");
+// const formContainer = document.getElementById("formContainer");
+// const aboutButton = document.getElementById("aboutButton");
+// const aboutContainer = document.getElementById("aboutContainer");
+// const banksButton = document.getElementById("banksButton");
+// const banksContainer = document.getElementById("banksContainer");
+// const whyusButton = document.getElementById("whyusButton");
+// const whyusContainer = document.getElementById("whyusContainer");
+// const faqButton = document.getElementById("faqButton");
+// const formActivationButton = document.getElementById("formActivation");
+// formButton.addEventListener("click", () => {
+//     if (!formButton.classList.contains("formExpansion")) {
+//         formButton.classList.add("formExpansion");
+//         formContainer.classList.add("formContainerExpansion");
+//         menuSecondRow.classList.add("rowResize");
+//     }
+// });
 
-formActivationButton.addEventListener("click", () => {
-    if (!formButton.classList.contains("formExpansion")) {
-        formButton.classList.add("formExpansion");
-        formContainer.classList.add("formContainerExpansion");
-        menuSecondRow.classList.add("rowResize");
-    }
-    formButton.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "nearest",
-    });
-});
-aboutButton.addEventListener("click", () => {
-    if (!aboutContainer.classList.contains("aboutExpansion")) {
-        aboutButton.classList.add("buttonModdif");
-        aboutContainer.classList.add("aboutExpansion");
-        navigationContainer.classList.add("containerResize");
-        dinamicMenu.setAttribute(
-            "style",
-            `height: ${dynamicMenu.offsetHeight + aboutContainer.offsetHeight}`
-        );
-    }
-});
+// formActivationButton.addEventListener("click", () => {
+//     if (!formButton.classList.contains("formExpansion")) {
+//         formButton.classList.add("formExpansion");
+//         formContainer.classList.add("formContainerExpansion");
+//         menuSecondRow.classList.add("rowResize");
+//     }
+//     formButton.scrollIntoView({
+//         behavior: "smooth",
+//         block: "start",
+//         inline: "nearest",
+//     });
+// });
+// aboutButton.addEventListener("click", () => {
+//     if (!aboutContainer.classList.contains("aboutExpansion")) {
+//         aboutButton.classList.add("buttonModdif");
+//         aboutContainer.classList.add("aboutExpansion");
+//         navigationContainer.classList.add("containerResize");
+//         dinamicMenu.setAttribute(
+//             "style",
+//             `height: ${dynamicMenu.offsetHeight + aboutContainer.offsetHeight}`
+//         );
+//     }
+// });
 
-banksButton.addEventListener("click", () => {
-    if (!banksButton.classList.contains("banksExpansion")) {
-        banksButton.classList.add("banksExpansion");
-        banksContainer.classList.add("banksContainerExpansion");
-        navigationContainer.classList.add("rowResizeBanks");
-        menuMiniRow.classList.add("miniRowResize");
-    }
-});
+// banksButton.addEventListener("click", () => {
+//     if (!banksButton.classList.contains("banksExpansion")) {
+//         banksButton.classList.add("banksExpansion");
+//         banksContainer.classList.add("banksContainerExpansion");
+//         navigationContainer.classList.add("rowResizeBanks");
+//         menuMiniRow.classList.add("miniRowResize");
+//     }
+// });
 
-whyusButton.addEventListener("click", () => {
-    if (!whyusButton.classList.contains("miniCardExpansion")) {
-        whyusButton.classList.add("miniCardExpansion");
-        whyusContainer.classList.add("miniCardContainerExpansion");
-        faqButton.classList.add("miniCardResize");
-        menuMiniRow.classList.add("miniRowCardResize");
-    }
-});
+// whyusButton.addEventListener("click", () => {
+//     if (!whyusButton.classList.contains("miniCardExpansion")) {
+//         whyusButton.classList.add("miniCardExpansion");
+//         whyusContainer.classList.add("miniCardContainerExpansion");
+//         faqButton.classList.add("miniCardResize");
+//         menuMiniRow.classList.add("miniRowCardResize");
+//     }
+// });
+

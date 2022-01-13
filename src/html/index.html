@@ -1,1 +1,472 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="shortcut icon" href="./assets/images/content/favicon.ico" type="image/x-icon"><link rel="stylesheet" href="./style.min.css"><title>Автокред</title></head><body> </body></html><main class="main"> <section class="form-section"></section><section class="advertisment-section"></section><section class="banks-section"> </section><section class="whyus-section"></section><section class="attention-section"> </section><section class="consultation-section"> </section><section class="feedback"></section><section class="company-section"> </section><section class="map-section"> </section></main><footer class="footer"> <div class="footer-text">2021 Freidman Solutions Ltd. All rights reserved.</div></footer><script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script src="./assets/js/jquery.min.js"> </script><script src="./assets/js/main.min.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/content/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.min.css">
+    <title>Автокред</title>
+</head>
+
+<body>
+    <section class="greeting-section">
+        <header class="header">
+            <div class="header-logo"><img src="./assets/images/content/logo2.svg" alt=""></div>
+            <div class="header-container">
+                <nav class="header-navigation"> <a class="header-link" href="#form">Оформить кредит</a><a class="header-link" href="#">Клиенту</a><a class="header-link" href="#">О Компании</a><a class="header-link" href="#contacts">Контакты </a></nav>
+                <div class="header-contact-info"><a class="header-phone" href="tel:+78006002515">8 800 600-25-15 </a>
+                    <div class="header-social">
+                        <a class="social-link" href="https://vk.com/felixfreidman"> <img src="./assets/images/content/vk.svg" alt="VK Logo"></a>
+                        <a class="social-link" href="https://instagram.com/freidman.creator"> <img src="./assets/images/content/instagram.svg" alt="Instagram Logo" style="width: 80%"></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="swiper greeting-swiper" id="greetingSwipper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide greeting-basic">
+                    <div class="greeting-slide">
+                        <div class="attention-container">
+                            <div class="attention-container__header">Кредит на покупку
+                                <div class="typewrite" data-period="2000" data-type="[&quot;автомобиля&quot;]"></div>
+                            </div>
+                            <div class="attention-container-row"> <a class="attention-container__button--expand" href="#banks">Подробнее</a><a class="attention-container__button--apply" href="#form">Заполнить форму</a></div>
+                        </div><img class="greeting-image" src="./assets/images/content/slide1.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide greeting-basic">
+                    <div class="greeting-slide">
+                        <div class="attention-container">
+                            <div class="attention-container__header">Все банки специализируются на
+                                <div class="typewrite" data-period="2000" data-type="[&quot;автокредитовании&quot;]">
+                                </div>
+                            </div>
+                            <div class="attention-container-row"> <a class="attention-container__button--expand" href="#banks">Подробнее</a><a class="attention-container__button--apply" href="#form">Заполнить форму</a></div>
+                        </div><img class="greeting-image" src="./assets/images/content/slide3.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide greeting-basic">
+                    <div class="greeting-slide">
+                        <div class="attention-container">
+                            <div class="attention-container__header">Без каско, первоначального
+                                <div class="typewrite" data-period="2000" data-type="[&quot;взноса и справок&quot;]">
+                                </div>
+                            </div>
+                            <div class="attention-container-row"> <a class="attention-container__button--expand" href="#banks">Подробнее</a><a class="attention-container__button--apply" href="#form">Заполнить форму</a></div>
+                        </div><img class="greeting-image" src="./assets/images/content/slide4.png" alt="" style="transform: scaleX(-1) ">
+                    </div>
+                </div>
+                <div class="swiper-slide greeting-basic">
+                    <div class="greeting-slide">
+                        <div class="attention-container">
+                            <div class="attention-container__header">Кредит на покупку
+                                <div class="typewrite" data-period="2000" data-type="[&quot;автомобиля&quot;]"></div>
+                            </div>
+                            <div class="attention-container-row"> <a class="attention-container__button--expand" href="#banks">Подробнее</a><a class="attention-container__button--apply" href="#form">Заполнить форму</a></div>
+                        </div><img class="greeting-image" src="./assets/images/content/slide1.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-navigation">
+                <div class="swiper-button--prev greeting-prev"></div>
+                <div class="swiper-button--next greeting-next"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <main class="main main-home">
+        <section class="form-section" id="form">
+            <div class="section-header">РАССЧИТАЙТЕ АВТОКРЕДИТ И ЗАПОЛНИТЕ АНКЕТУ</div>
+            <div class="section-container">
+                <div class="application-type"> </div>
+                <form class="js-order-form js-calc-form main-calc" action="" method="post">
+                    <div class="calculation-form1">
+
+
+                        <div class="calculation-form1-pos">
+                            <div class="calculation-form1__over js-calc-kred">
+                                <div class="calculation-form1__left">
+                                    <div class="calculation-form1__item-slide slide1" data-slider-index="1" data-value="500000">
+                                        <div class="calculation-form1__text"><span>Стоимость авто</span><i contenteditable="true">500<span></span>000</i></div>
+                                        <div class="calculation-form1__slide-js ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+                                            <div class="ui-slider-range ui-corner-all ui-widget-header ui-slider-range-min" style="width: 9.41176%;"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 9.41176%;"><i></i></span>
+                                        </div>
+                                        <input type="hidden" name="data[Автомобиль][Стоимость]" value="500000">
+                                    </div>
+                                    <div class="calculation-form1__item-slide slide2" data-slider-index="2" data-value="100000">
+                                        <div class="calculation-form1__text"><span>Первоначальный взнос</span><i contenteditable="true">100<span></span>000</i></div>
+                                        <div class="calculation-form1__slide-js ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+                                            <div class="ui-slider-range ui-corner-all ui-widget-header ui-slider-range-min" style="width: 25%;"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 25%;"><i></i></span>
+                                        </div>
+                                        <input type="hidden" name="data[Автомобиль][Первоначальный взнос]" value="100000">
+                                    </div>
+                                    <div class="calculation-form1__item-slide slide3" data-slider-index="3" data-value="36">
+                                        <div class="calculation-form1__text"><span>Срок займа</span><i class="mounth choose_period">3 года</i>
+                                            <div class="jq-selectbox jqselect period_cred changed" style="display: inline-block; position: relative; z-index:100"><select class="period_cred" style="margin: 0px; padding: 0px; position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 0;">
+                                                    <option value="6">6 месяцев</option>
+                                                    <option value="10">10 месяцев</option>
+                                                    <option value="12">1 год</option>
+                                                    <option value="24">2 года</option>
+                                                    <option value="36" selected="">3 года</option>
+                                                    <option value="48">4 года</option>
+                                                    <option value="60">5 лет</option>
+                                                    <option value="72">6 лет</option>
+                                                    <option value="84">7 лет</option>
+                                                    <option value="96">8 лет</option>
+                                                </select>
+                                                <div class="jq-selectbox__select" style="position: relative">
+                                                    <div class="jq-selectbox__select-text" style="width: 100px;">3 года
+                                                    </div>
+                                                    <div class="jq-selectbox__trigger">
+                                                        <div class="jq-selectbox__trigger-arrow"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="jq-selectbox__dropdown" style="position: absolute; display: none;">
+                                                    <ul style="position: relative; list-style: none; overflow: auto; overflow-x: hidden">
+                                                        <li style="">6 месяцев</li>
+                                                        <li style="">10 месяцев</li>
+                                                        <li style="">1 год</li>
+                                                        <li style="">2 года</li>
+                                                        <li class="selected sel" style="">3 года</li>
+                                                        <li style="">4 года</li>
+                                                        <li style="">5 лет</li>
+                                                        <li style="">6 лет</li>
+                                                        <li style="">7 лет</li>
+                                                        <li style="">8 лет</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="calculation-form1__slide-js ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+                                            <div class="ui-slider-range ui-corner-all ui-widget-header ui-slider-range-min" style="width: 50%;"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 50%;"><i></i></span>
+                                        </div>
+                                        <input type="hidden" name="data[Автомобиль][Срок займа]" value="36">
+                                    </div>
+                                </div>
+                                <div class="calculation-form1__right">
+                                    <div class="text-result1">
+                                        <div class="text-result1__title">Ежемесячный платеж составит:</div>
+                                        <div class="text-result1__price"><span>11 792 руб.</span><i></i></div>
+                                        <div class="text-result1__text">
+                                            <p>При расчете используется минимально возможная ставка по <br>автокредиту — 6,4% годовых*. Реальная процентная ставка может отличаться.
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calculation-form1__list">
+                                <div class="calculation-form1__list-item">
+                                    <div class="calculation-form1__list-title">Марка автомобиля</div>
+                                    <div class="jq-selectbox jqselect" style="display: inline-block; position: relative; z-index:100"><select name="data[Автомобиль][Марка]" data-selected="" style="margin: 0px; padding: 0px; position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 0;">
+                                            <option disabled="" selected="">Выберите марку</option>
+
+                                            <option value="Toyota" data-id="9">Toyota</option>
+                                            <option value="Лада" data-id="99">Лада</option>
+                                            <option value="Nissan" data-id="6">Nissan</option>
+                                            <option value="Hyundai" data-id="56">Hyundai</option>
+                                            <option value="Kia" data-id="59">Kia</option>
+                                            <option value="Acura" data-id="21">Acura</option>
+                                            <option value="Alfa Romeo" data-id="27">Alfa Romeo</option>
+                                            <option value="Alpina" data-id="28">Alpina</option>
+                                            <option value="Asia" data-id="29">Asia</option>
+                                            <option value="Aston Martin" data-id="30">Aston Martin</option>
+                                            <option value="Audi" data-id="31">Audi</option>
+                                            <option value="BMW" data-id="33">BMW</option>
+                                            <option value="BYD" data-id="36">BYD</option>
+                                            <option value="Bentley" data-id="32">Bentley</option>
+                                            <option value="Brilliance" data-id="98">Brilliance</option>
+                                            <option value="Bugatti" data-id="34">Bugatti</option>
+                                            <option value="Buick" data-id="35">Buick</option>
+                                            <option value="Cadillac" data-id="37">Cadillac</option>
+                                            <option value="Changan" data-id="119">Changan</option>
+                                            <option value="Chery" data-id="38">Chery</option>
+                                            <option value="Chevrolet" data-id="39">Chevrolet</option>
+                                            <option value="Chrysler" data-id="40">Chrysler</option>
+                                            <option value="Citroen" data-id="41">Citroen</option>
+                                            <option value="DW Hower" data-id="138">DW Hower</option>
+                                            <option value="Dacia" data-id="110">Dacia</option>
+                                            <option value="Daewoo" data-id="42">Daewoo</option>
+                                            <option value="Daihatsu" data-id="1">Daihatsu</option>
+                                            <option value="Daimler" data-id="43">Daimler</option>
+                                            <option value="Datsun" data-id="116">Datsun</option>
+                                            <option value="DeLorean" data-id="134">DeLorean</option>
+                                            <option value="Derways" data-id="94">Derways</option>
+                                            <option value="Dodge" data-id="44">Dodge</option>
+                                            <option value="Dongfeng" data-id="125">Dongfeng</option>
+                                            <option value="Eagle" data-id="45">Eagle</option>
+                                            <option value="FAW" data-id="46">FAW</option>
+                                            <option value="Ferrari" data-id="47">Ferrari</option>
+                                            <option value="Fiat" data-id="48">Fiat</option>
+                                            <option value="Fisker" data-id="123">Fisker</option>
+                                            <option value="Ford" data-id="49">Ford</option>
+                                            <option value="Foton" data-id="137">Foton</option>
+                                            <option value="GAC" data-id="140">GAC</option>
+                                            <option value="GMC" data-id="53">GMC</option>
+                                            <option value="Geely" data-id="52">Geely</option>
+                                            <option value="Genesis" data-id="135">Genesis</option>
+                                            <option value="Geo" data-id="51">Geo</option>
+                                            <option value="Great Wall" data-id="54">Great Wall</option>
+                                            <option value="Hafei" data-id="109">Hafei</option>
+                                            <option value="Haima" data-id="106">Haima</option>
+                                            <option value="Haval" data-id="126">Haval</option>
+                                            <option value="Hawtai" data-id="132">Hawtai</option>
+                                            <option value="Honda" data-id="2">Honda</option>
+                                            <option value="Hummer" data-id="55">Hummer</option>
+                                            <option value="Infiniti" data-id="20">Infiniti</option>
+                                            <option value="Iran Khodro" data-id="108">Iran Khodro</option>
+                                            <option value="Isuzu" data-id="3">Isuzu</option>
+                                            <option value="JAC" data-id="121">JAC</option>
+                                            <option value="Jaguar" data-id="57">Jaguar</option>
+                                            <option value="Jeep" data-id="58">Jeep</option>
+                                            <option value="Koenigsegg" data-id="117">Koenigsegg</option>
+                                            <option value="Lamborghini" data-id="60">Lamborghini</option>
+                                            <option value="Lancia" data-id="61">Lancia</option>
+                                            <option value="Land Rover" data-id="62">Land Rover</option>
+                                            <option value="Lexus" data-id="23">Lexus</option>
+                                            <option value="Lifan" data-id="96">Lifan</option>
+                                            <option value="Lincoln" data-id="63">Lincoln</option>
+                                            <option value="Lotus" data-id="64">Lotus</option>
+                                            <option value="Luxgen" data-id="113">Luxgen</option>
+                                            <option value="Marussia" data-id="112">Marussia</option>
+                                            <option value="Maserati" data-id="65">Maserati</option>
+                                            <option value="Maybach" data-id="66">Maybach</option>
+                                            <option value="Mazda" data-id="4">Mazda</option>
+                                            <option value="McLaren" data-id="120">McLaren</option>
+                                            <option value="Mercedes-Benz" data-id="67">Mercedes-Benz</option>
+                                            <option value="Mercury" data-id="68">Mercury</option>
+                                            <option value="Mini" data-id="69">Mini</option>
+                                            <option value="Mitsubishi" data-id="5">Mitsubishi</option>
+                                            <option value="Mitsuoka" data-id="22">Mitsuoka</option>
+                                            <option value="Oldsmobile" data-id="70">Oldsmobile</option>
+                                            <option value="Opel" data-id="71">Opel</option>
+                                            <option value="Pagani" data-id="118">Pagani</option>
+                                            <option value="Peugeot" data-id="72">Peugeot</option>
+                                            <option value="Plymouth" data-id="73">Plymouth</option>
+                                            <option value="Pontiac" data-id="74">Pontiac</option>
+                                            <option value="Porsche" data-id="75">Porsche</option>
+                                            <option value="Proton" data-id="76">Proton</option>
+                                            <option value="Ravon" data-id="133">Ravon</option>
+                                            <option value="Renault" data-id="77">Renault</option>
+                                            <option value="Renault Samsung" data-id="92">Renault Samsung</option>
+                                            <option value="Rolls-Royce" data-id="78">Rolls-Royce</option>
+                                            <option value="Rover" data-id="79">Rover</option>
+                                            <option value="SEAT" data-id="83">SEAT</option>
+                                            <option value="Saab" data-id="80">Saab</option>
+                                            <option value="Saturn" data-id="81">Saturn</option>
+                                            <option value="Scion" data-id="82">Scion</option>
+                                            <option value="Skoda" data-id="84">Skoda</option>
+                                            <option value="Smart" data-id="85">Smart</option>
+                                            <option value="SsangYong" data-id="86">SsangYong</option>
+                                            <option value="Subaru" data-id="7">Subaru</option>
+                                            <option value="Suzuki" data-id="8">Suzuki</option>
+                                            <option value="Tesla" data-id="115">Tesla</option>
+                                            <option value="Tianye" data-id="87">Tianye</option>
+                                            <option value="Volkswagen" data-id="89">Volkswagen</option>
+                                            <option value="Volvo" data-id="90">Volvo</option>
+                                            <option value="Vortex" data-id="107">Vortex</option>
+                                            <option value="Wiesmann" data-id="122">Wiesmann</option>
+                                            <option value="Xin Kai" data-id="91">Xin Kai</option>
+                                            <option value="ZX" data-id="124">ZX</option>
+                                            <option value="Zotye" data-id="136">Zotye</option>
+                                            <option value="Аурус" data-id="139">Аурус</option>
+                                            <option value="ГАЗ" data-id="100">ГАЗ</option>
+                                            <option value="ЗАЗ" data-id="104">ЗАЗ</option>
+                                            <option value="ИЖ" data-id="105">ИЖ</option>
+                                            <option value="ЛуАЗ" data-id="114">ЛуАЗ</option>
+                                            <option value="Москвич" data-id="102">Москвич</option>
+                                            <option value="Прочие авто" data-id="111">Прочие авто</option>
+                                            <option value="ТагАЗ" data-id="103">ТагАЗ</option>
+                                            <option value="УАЗ" data-id="101">УАЗ</option>
+                                        </select>
+                                        <div class="jq-selectbox__select" style="position: relative">
+                                            <div class="jq-selectbox__select-text" style="width: 131px;">Выберите марку
+                                            </div>
+                                            <div class="jq-selectbox__trigger">
+                                                <div class="jq-selectbox__trigger-arrow"></div>
+                                            </div>
+                                        </div>
+                                        <div class="jq-selectbox__dropdown" style="position: absolute; display: none;">
+                                            <ul style="position: relative; list-style: none; overflow: auto; overflow-x: hidden">
+                                                <li class="selected sel disabled" style="">Выберите марку</li>
+                                                <li data-id="9" style="">Toyota</li>
+                                                <li data-id="99" style="">Лада</li>
+                                                <li data-id="6" style="">Nissan</li>
+                                                <li data-id="56" style="">Hyundai</li>
+                                                <li data-id="59" style="">Kia</li>
+                                                <li data-id="21" style="">Acura</li>
+                                                <li data-id="27" style="">Alfa Romeo</li>
+                                                <li data-id="28" style="">Alpina</li>
+                                                <li data-id="29" style="">Asia</li>
+                                                <li data-id="30" style="">Aston Martin</li>
+                                                <li data-id="31" style="">Audi</li>
+                                                <li data-id="33" style="">BMW</li>
+                                                <li data-id="36" style="">BYD</li>
+                                                <li data-id="32" style="">Bentley</li>
+                                                <li data-id="98" style="">Brilliance</li>
+                                                <li data-id="34" style="">Bugatti</li>
+                                                <li data-id="35" style="">Buick</li>
+                                                <li data-id="37" style="">Cadillac</li>
+                                                <li data-id="119" style="">Changan</li>
+                                                <li data-id="38" style="">Chery</li>
+                                                <li data-id="39" style="">Chevrolet</li>
+                                                <li data-id="40" style="">Chrysler</li>
+                                                <li data-id="41" style="">Citroen</li>
+                                                <li data-id="138" style="">DW Hower</li>
+                                                <li data-id="110" style="">Dacia</li>
+                                                <li data-id="42" style="">Daewoo</li>
+                                                <li data-id="1" style="">Daihatsu</li>
+                                                <li data-id="43" style="">Daimler</li>
+                                                <li data-id="116" style="">Datsun</li>
+                                                <li data-id="134" style="">DeLorean</li>
+                                                <li data-id="94" style="">Derways</li>
+                                                <li data-id="44" style="">Dodge</li>
+                                                <li data-id="125" style="">Dongfeng</li>
+                                                <li data-id="45" style="">Eagle</li>
+                                                <li data-id="46" style="">FAW</li>
+                                                <li data-id="47" style="">Ferrari</li>
+                                                <li data-id="48" style="">Fiat</li>
+                                                <li data-id="123" style="">Fisker</li>
+                                                <li data-id="49" style="">Ford</li>
+                                                <li data-id="137" style="">Foton</li>
+                                                <li data-id="140" style="">GAC</li>
+                                                <li data-id="53" style="">GMC</li>
+                                                <li data-id="52" style="">Geely</li>
+                                                <li data-id="135" style="">Genesis</li>
+                                                <li data-id="51" style="">Geo</li>
+                                                <li data-id="54" style="">Great Wall</li>
+                                                <li data-id="109" style="">Hafei</li>
+                                                <li data-id="106" style="">Haima</li>
+                                                <li data-id="126" style="">Haval</li>
+                                                <li data-id="132" style="">Hawtai</li>
+                                                <li data-id="2" style="">Honda</li>
+                                                <li data-id="55" style="">Hummer</li>
+                                                <li data-id="20" style="">Infiniti</li>
+                                                <li data-id="108" style="">Iran Khodro</li>
+                                                <li data-id="3" style="">Isuzu</li>
+                                                <li data-id="121" style="">JAC</li>
+                                                <li data-id="57" style="">Jaguar</li>
+                                                <li data-id="58" style="">Jeep</li>
+                                                <li data-id="117" style="">Koenigsegg</li>
+                                                <li data-id="60" style="">Lamborghini</li>
+                                                <li data-id="61" style="">Lancia</li>
+                                                <li data-id="62" style="">Land Rover</li>
+                                                <li data-id="23" style="">Lexus</li>
+                                                <li data-id="96" style="">Lifan</li>
+                                                <li data-id="63" style="">Lincoln</li>
+                                                <li data-id="64" style="">Lotus</li>
+                                                <li data-id="113" style="">Luxgen</li>
+                                                <li data-id="112" style="">Marussia</li>
+                                                <li data-id="65" style="">Maserati</li>
+                                                <li data-id="66" style="">Maybach</li>
+                                                <li data-id="4" style="">Mazda</li>
+                                                <li data-id="120" style="">McLaren</li>
+                                                <li data-id="67" style="">Mercedes-Benz</li>
+                                                <li data-id="68" style="">Mercury</li>
+                                                <li data-id="69" style="">Mini</li>
+                                                <li data-id="5" style="">Mitsubishi</li>
+                                                <li data-id="22" style="">Mitsuoka</li>
+                                                <li data-id="70" style="">Oldsmobile</li>
+                                                <li data-id="71" style="">Opel</li>
+                                                <li data-id="118" style="">Pagani</li>
+                                                <li data-id="72" style="">Peugeot</li>
+                                                <li data-id="73" style="">Plymouth</li>
+                                                <li data-id="74" style="">Pontiac</li>
+                                                <li data-id="75" style="">Porsche</li>
+                                                <li data-id="76" style="">Proton</li>
+                                                <li data-id="133" style="">Ravon</li>
+                                                <li data-id="77" style="">Renault</li>
+                                                <li data-id="92" style="">Renault Samsung</li>
+                                                <li data-id="78" style="">Rolls-Royce</li>
+                                                <li data-id="79" style="">Rover</li>
+                                                <li data-id="83" style="">SEAT</li>
+                                                <li data-id="80" style="">Saab</li>
+                                                <li data-id="81" style="">Saturn</li>
+                                                <li data-id="82" style="">Scion</li>
+                                                <li data-id="84" style="">Skoda</li>
+                                                <li data-id="85" style="">Smart</li>
+                                                <li data-id="86" style="">SsangYong</li>
+                                                <li data-id="7" style="">Subaru</li>
+                                                <li data-id="8" style="">Suzuki</li>
+                                                <li data-id="115" style="">Tesla</li>
+                                                <li data-id="87" style="">Tianye</li>
+                                                <li data-id="89" style="">Volkswagen</li>
+                                                <li data-id="90" style="">Volvo</li>
+                                                <li data-id="107" style="">Vortex</li>
+                                                <li data-id="122" style="">Wiesmann</li>
+                                                <li data-id="91" style="">Xin Kai</li>
+                                                <li data-id="124" style="">ZX</li>
+                                                <li data-id="136" style="">Zotye</li>
+                                                <li data-id="139" style="">Аурус</li>
+                                                <li data-id="100" style="">ГАЗ</li>
+                                                <li data-id="104" style="">ЗАЗ</li>
+                                                <li data-id="105" style="">ИЖ</li>
+                                                <li data-id="114" style="">ЛуАЗ</li>
+                                                <li data-id="102" style="">Москвич</li>
+                                                <li data-id="111" style="">Прочие авто</li>
+                                                <li data-id="103" style="">ТагАЗ</li>
+                                                <li data-id="101" style="">УАЗ</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calculation-form1__list-item">
+                                    <div class="calculation-form1__list-title">Модель автомобиля</div>
+                                    <div class="jq-selectbox jqselect" style="display: inline-block; position: relative; z-index:100"><select name="data[Автомобиль][Модель]" data-selected="" style="margin: 0px; padding: 0px; position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 0;">
+                                            <option disabled="" selected="">Выберите модель</option>
+                                        </select>
+                                        <div class="jq-selectbox__select" style="position: relative">
+                                            <div class="jq-selectbox__select-text" style="width: 119px;">Выберите модель
+                                            </div>
+                                            <div class="jq-selectbox__trigger">
+                                                <div class="jq-selectbox__trigger-arrow"></div>
+                                            </div>
+                                        </div>
+                                        <div class="jq-selectbox__dropdown" style="position: absolute; display: none;">
+                                            <ul style="position: relative; list-style: none; overflow: auto; overflow-x: hidden">
+                                                <li class="selected sel disabled" style="">Выберите модель</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calculation-form1__list-item mod1">
+                                    <div class="calculation-form1__list-title">Год выпуска</div>
+                                    <input name="data[Автомобиль][Год выпуска]" type="text" placeholder="----" class="calculation-form1__input" value="">
+                                </div>
+                            </div>
+
+                            <div class="calculation-form1__button">
+                                <a class="calculation-form1__button-link icon1" data-popup="popup-callback1.html">отправить быструю заявку →</a>
+                                <a class="calculation-form1__button-link icon2" href="/request">заполнить полную анкету
+                                    →</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="advertisment-section"></section>
+        <section class="banks-section">
+            <div class="section-header">Банки-Партнеры</div>
+        </section>
+        <section class="whyus-section">
+            <div class="section-header">ПОЧЕМУ СТОИТ ОБРАТИТЬСЯ ИМЕННО К НАМ?</div>
+        </section>
+        <section class="attention-section"> </section>
+        <section class="consultation-section"> </section>
+        <section class="feedback-section">
+            <div class="section-header">ОТЗЫВЫ НАШИХ КЛИЕНТОВ</div>
+        </section>
+        <section class="company-section">
+            <div class="section-header">НЕМНОГО О НАШЕЙ КОМПАНИИ</div>
+        </section>
+        <section class="map-section" id="contact"></section>
+    </main>
+    <footer class="footer"> </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./assets/js/jquery.min.js">
+    </script>
+    <script src="./assets/js/plugins.min.js"></script>
+    <script src="./assets/js/main.min.js"></script>

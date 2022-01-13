@@ -7,4 +7,54 @@ html(lang="en")
         link(rel="shortcut icon", href="./assets/images/content/favicon.ico", type="image/x-icon")
         link(rel="stylesheet", href="./style.min.css")
         title Автокред
-    body 
+    body
+        section.greeting-section 
+            header.header
+                .header-logo
+                    img(src="./assets/images/content/logo2.svg", alt="") 
+                .header-container 
+                    nav.header-navigation 
+                        a.header-link(href="#form") Оформить кредит
+                        a.header-link(href="#") Клиенту
+                        a.header-link(href="#") О Компании
+                        a.header-link(href="#contacts") Контакты 
+                    .header-contact-info
+                        a.header-phone(href="tel:+78006002515") 8 800 600-25-15 
+                        .header-social 
+                            a(href="https://vk.com/felixfreidman").social-link 
+                                img(src="./assets/images/content/vk.svg", alt="VK Logo")
+                            a(href="https://instagram.com/freidman.creator").social-link 
+                                img(src="./assets/images/content/instagram.svg", alt="Instagram Logo", style="width: 80%")
+            .swiper.greeting-swiper#greetingSwipper
+                .swiper-wrapper
+                    .swiper-slide.greeting-basic
+                        .greeting-slide 
+                            .attention-container 
+                                .attention-container__header Кредит на покупку 
+                                    .typewrite(data-period="2000",data-type='["автомобиля"]')
+                                .attention-container-row 
+                                    a(href="#banks").attention-container__button--expand Подробнее
+                                    a(href="#form").attention-container__button--apply Заполнить форму
+                            img(src="./assets/images/content/slide1.png", alt="").greeting-image
+                    .swiper-slide.greeting-basic
+                            .greeting-slide 
+                                .attention-container 
+                                    .attention-container__header Все банки специализируются на 
+                                        .typewrite(data-period="2000",data-type='["автокредитовании"]')
+                                    .attention-container-row 
+                                        a(href="#banks").attention-container__button--expand Подробнее
+                                        a(href="#form").attention-container__button--apply Заполнить форму
+                                img(src="./assets/images/content/slide3.png", alt="").greeting-image
+                    .swiper-slide.greeting-basic
+                            .greeting-slide 
+                                .attention-container 
+                                    .attention-container__header Без каско, первоначального 
+                                        .typewrite(data-period="2000",data-type='["взноса и справок"]')
+                                    .attention-container-row 
+                                        a(href="#banks").attention-container__button--expand Подробнее
+                                        a(href="#form").attention-container__button--apply Заполнить форму
+                                img(src="./assets/images/content/slide4.png", alt="",style="transform: scaleX(-1) ").greeting-image
+                    
+                .swiper-navigation 
+                    .swiper-button--prev.greeting-prev
+                    .swiper-button--next.greeting-next
