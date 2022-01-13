@@ -77,17 +77,26 @@ const banksContainer = document.getElementById("banksContainer");
 const whyusButton = document.getElementById("whyusButton");
 const whyusContainer = document.getElementById("whyusContainer");
 const faqButton = document.getElementById("faqButton");
+const formActivationButton = document.getElementById("formActivation");
 formButton.addEventListener("click", () => {
     if (!formButton.classList.contains("formExpansion")) {
         formButton.classList.add("formExpansion");
         formContainer.classList.add("formContainerExpansion");
         menuSecondRow.classList.add("rowResize");
-        // let menuSecondRowHeight = menuSecondRow.offsetHeight;
-        // menuSecondRow.setAttribute(
-        //     "style",
-        //     `height: ${menuSecondRowHeight + 300}px`
-        // );
     }
+});
+
+formActivationButton.addEventListener("click", () => {
+    if (!formButton.classList.contains("formExpansion")) {
+        formButton.classList.add("formExpansion");
+        formContainer.classList.add("formContainerExpansion");
+        menuSecondRow.classList.add("rowResize");
+    }
+    formButton.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+    });
 });
 aboutButton.addEventListener("click", () => {
     if (!aboutContainer.classList.contains("aboutExpansion")) {
