@@ -1,0 +1,60 @@
+form(action="", method="post").application-form
+    .first-screen.form-screen.screen--hide#firstScreen
+        .screen-header Вы уже определились, какой автомобиль хотите? 
+        .application-button.application-button--yes Да
+        .application-button.application-button--no Нет
+        .application-form__navigation 
+            .navigation__progress-bar 
+        .navigation-controller    
+            .form-navigation__button.form-navigation__button--prev.form-navigation__button--disabled 
+            .form-navigation__button.form-navigation__button--next#secondScreenButton
+    .second-screen.form-screen.screen--hide#secondScreen 
+        .screen-header Выберете пожалуйста тип ТС
+        .application-table 
+            .application-table__option 
+                img(src="./assets/images/content/slide1.png", alt="").application-image
+                .application-caption Легковой автомобиль
+            .application-table__option 
+                img(src="./assets/images/content/slide2.png", alt="").application-image
+                .application-caption Мотоцикл
+            .application-table__option 
+                img(src="./assets/images/content/slide3.png", alt="").application-image
+                .application-caption Спецтехника
+            .application-table__option
+                img(src="./assets/images/content/slide4.png", alt="").application-image
+                .application-caption Другое
+        .application-form__navigation 
+            .navigation__progress-bar.navigation__progress-bar--20p 
+        .navigation-controller    
+            .form-navigation__button.form-navigation__button--prev#firstScreenButton 
+            .form-navigation__button.form-navigation__button--next#thirdScreenButton
+    .third-screen.form-screen.screen--hide#thirdScreen 
+        .screen-header Укажите сумму кредита
+        .application-slider 
+            .slider--debt#sliderDebt
+            input#debtInput(type="text", name="debtInput").application-input--debt
+        .application-form__navigation 
+            .navigation__progress-bar.navigation__progress-bar--40p 
+        .navigation-controller    
+            .form-navigation__button.form-navigation__button--prev#secondScreenButton 
+            .form-navigation__button.form-navigation__button--next#fourthScreenButton
+    .fourth-screen.form-screen.screen--hide#fourthScreen 
+        .screen-header Укажите срок кредитования
+        .application-slider 
+            .slider--debt#sliderTime
+            input#timeInput(type="text", name="debtInput").application-input--debt
+        .application-form__navigation 
+            .navigation__progress-bar.navigation__progress-bar--60p 
+        .navigation-controller    
+            .form-navigation__button.form-navigation__button--prev#thirdScreenButton 
+            .form-navigation__button.form-navigation__button--next#fifthScreenButton
+    .fifth-screen.form-screen.screen--show#fifthScreen 
+        .screen-header Укажите ваш ежемесячный доход
+        .application-slider 
+            .slider--debt#sliderIncome
+            input#incomeInput(type="text", name="debtInput").application-input--debt
+        .application-form__navigation 
+            .navigation__progress-bar.navigation__progress-bar--60p 
+        .navigation-controller    
+            .form-navigation__button.form-navigation__button--prev#thirdScreenButton 
+            .form-navigation__button.form-navigation__button--next#fifthScreenButton

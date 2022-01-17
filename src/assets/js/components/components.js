@@ -5,7 +5,6 @@ HeadersArray.forEach((element) => {
     let HeaderValue = element.getAttribute("data-info");
     menu.push(HeaderValue);
 });
-console.log(menu);
 let swiper = new Swiper("#greetingSwipper", {
     // fadeEffect: {
     //     crossFade: true,

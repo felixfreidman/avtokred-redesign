@@ -128,3 +128,111 @@ AOS.init({
 //     }
 // });
 
+const firstScreen = document.getElementById("firstScreen");
+const secondScreem = document.getElementById("secondScreen");
+const allNextButtons = document.querySelectorAll(
+    ".form-navigation__button--next"
+);
+allNextButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        let buttonId = button.id;
+        buttonId = buttonId.replace("Button", "");
+        let parentId = button.parentNode.parentNode.id;
+        document.getElementById(parentId).classList.toggle("screen--hide");
+        document.getElementById(parentId).classList.toggle("screen--show");
+        document.getElementById(buttonId).classList.toggle("screen--hide");
+        document.getElementById(buttonId).classList.toggle("screen--show");
+    });
+});
+const alPrevButtons = document.querySelectorAll(
+    ".form-navigation__button--prev"
+);
+alPrevButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        let buttonId = button.id;
+        buttonId = buttonId.replace("Button", "");
+        let parentId = button.parentNode.parentNode.id;
+        document.getElementById(parentId).classList.toggle("screen--hide");
+        document.getElementById(parentId).classList.toggle("screen--show");
+        document.getElementById(buttonId).classList.toggle("screen--hide");
+        document.getElementById(buttonId).classList.toggle("screen--show");
+    });
+});
+$(document).ready(function() {
+    $("#sliderDebt").slider({
+        range: "min",
+        animate: true,
+        value: 500000,
+        min: 100000,
+        max: 4350000,
+        step: 1000,
+        slide: function(event, ui) {
+            let debtValue = ui.value;
+            debtValue = numberWithCommas(debtValue);
+            $("#debtInput").val(debtValue);
+        },
+    });
+    $("#debtInput").val($("#sliderDebt").slider("option", "value"));
+    $("#debtInput").change(function() {
+        $("#sliderDebt").slider("value", $(this).val());
+    });
+    $("#sliderTime").slider({
+        range: "min",
+        animate: true,
+        value: 3,
+        min: 1,
+        max: 8,
+        step: 1,
+        slide: function(event, ui) {
+            let timeValue = ui.value;
+            switch (timeValue) {
+                case 1:
+                    timeValue = `${timeValue} год`;
+                    break;
+                case 2:
+                    timeValue = `${timeValue} года`;
+                    break;
+                case 3:
+                    timeValue = `${timeValue} года`;
+                    break;
+                case 4:
+                    timeValue = `${timeValue} года`;
+                    break;
+                default:
+                    timeValue = `${timeValue} лет`;
+            }
+            $("#timeInput").val(timeValue);
+        },
+    });
+    $("#timeInput").val($("#sliderTime").slider("option", "value"));
+    let timeValue = $("#timeInput").val();
+    console.log(timeValue);
+    switch (timeValue) {
+        default: timeValue = `${timeValue} года`;
+    }
+    $("#timeInput").val(timeValue);
+    $("#timeInput").change(function() {
+        $("#sliderTime").slider("value", $(this).val());
+    });
+    $("#sliderIncome").slider({
+        range: "min",
+        animate: true,
+        value: 30000,
+        min: 10000,
+        max: 500000,
+        step: 5000,
+        slide: function(event, ui) {
+            let debtValue = ui.value;
+            debtValue = numberWithCommas(debtValue);
+            $("#incomeInput").val(debtValue);
+        },
+    });
+    $("#incomeInput").val($("#sliderIncome").slider("option", "value"));
+    $("#incomeInput").change(function() {
+        $("#sliderIncome").slider("value", $(this).val());
+    });
+});
+
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}

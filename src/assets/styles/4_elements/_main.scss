@@ -200,7 +200,10 @@ a {
 .section-container {
     width: 100%;
     height: fit-content;
-    background-color: rgba($color: #ccc, $alpha: .8);
+    background-color: rgba($color: #ccc, $alpha: .4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .swiper-pagination.home-pagination {
