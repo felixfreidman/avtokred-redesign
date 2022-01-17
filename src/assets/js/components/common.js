@@ -81,4 +81,3 @@ $(document).ready(function() {
             $(".submit-button").removeClass("form-navigation__button--disabled");
         }
     });
-});
