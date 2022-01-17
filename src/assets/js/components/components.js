@@ -2,7 +2,7 @@
 let menu = [];
 let HeadersArray = document.querySelectorAll(".attention-container__header");
 HeadersArray.forEach((element) => {
-    let HeaderValue = element.textContent;
+    let HeaderValue = element.getAttribute("data-info");
     menu.push(HeaderValue);
 });
 console.log(menu);
@@ -18,7 +18,13 @@ let swiper = new Swiper("#greetingSwipper", {
         el: ".swiper-pagination",
         clickable: true,
         renderBullet: function(index, className) {
-            return '<span class="' + className + '">' + menu[index] + "</span>";
+            let readyElement = `
+            <div class = "${className} bullet-special">
+                <div class ="bullet-header">${menu[index]}</div>
+                <div class = ""></div>
+            </div>
+            `;
+            return readyElement;
         },
     },
     // pagination: {

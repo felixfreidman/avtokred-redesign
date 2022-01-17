@@ -23,7 +23,7 @@ a {
 }
 
 .greeting-basic {
-    background: linear-gradient(135deg, #fff, #f57830, #fff);
+    background: linear-gradient(135deg, #D3CCE3, #E9E4F0);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
 }
@@ -44,7 +44,7 @@ a {
     }
     .attention-container__header {
         color: #0b1f35;
-        font-size: 60px;
+        font-size: 42px;
         font-weight: 700;
     }
     .attention-container-row {
@@ -192,6 +192,9 @@ a {
         width: 60%;
         font-size: 40px;
     }
+    .form-section {
+        padding-top: 150px;
+    }
 }
 
 .section-container {
@@ -200,23 +203,53 @@ a {
     background-color: rgba($color: #ccc, $alpha: .8);
 }
 
-.swiper-pagination {
-    width: 100%;
+.swiper-pagination.home-pagination {
+    width: 90%;
     position: absolute;
-    bottom: 0;
+    bottom: -75px;
     left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
     display: flex;
     justify-content: space-between;
     .swiper-pagination-bullet {
-        width: 25%;
-        border-radius: 22px;
+        width: 23%;
+        border-radius: 8px;
         height: 150px;
-        background-color: rgba($color: #ccc, $alpha: 1);
+        background: linear-gradient(135deg, #C9D6FF, #E2E2E2);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
         color: #000;
         z-index: 30;
         opacity: 1;
+        transition: transform 0.3s ease;
+        &:hover {
+            transform: scale(1.1);
+        }
     }
     .swiper-pagination-bullet-active {
-        background-color: rgba($color: #fff, $alpha: 1);
+        background: linear-gradient(135deg, #005AA7, #FFFDE4);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        .bullet-header {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 700;
+            width: 80%;
+        }
     }
+    .bullet-header {
+        color: #0b1f35;
+        font-size: 18px;
+        font-weight: 600;
+        width: 80%;
+    }
+}
+
+.bullet-special {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

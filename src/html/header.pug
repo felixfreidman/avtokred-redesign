@@ -30,8 +30,8 @@ html(lang="en")
                     .swiper-slide.greeting-basic
                         .greeting-slide 
                             .attention-container 
-                                .attention-container__header Кредит на покупку 
-                                    .typewrite(data-period="2000",data-type='["автомобиля"]')
+                                .attention-container__header(data-info="Кредит на покупку легкового автомобиля") Кредит на покупку 
+                                    .typewrite(data-period="2000",data-type='["легкового автомобиля"]')
                                 .attention-container-row 
                                     a(href="#banks").attention-container__button--expand Подробнее
                                     a(href="#form").attention-container__button--apply Заполнить форму
@@ -39,8 +39,8 @@ html(lang="en")
                     .swiper-slide.greeting-basic
                             .greeting-slide 
                                 .attention-container 
-                                    .attention-container__header Все банки специализируются на 
-                                        .typewrite(data-period="2000",data-type='["автокредитовании"]')
+                                    .attention-container__header(data-info="Кредит на покупку специальной техники") Кредит на покупку 
+                                        .typewrite(data-period="2000",data-type='["специальной техники"]')
                                     .attention-container-row 
                                         a(href="#banks").attention-container__button--expand Подробнее
                                         a(href="#form").attention-container__button--apply Заполнить форму
@@ -48,13 +48,23 @@ html(lang="en")
                     .swiper-slide.greeting-basic
                             .greeting-slide 
                                 .attention-container 
-                                    .attention-container__header Без каско, первоначального 
-                                        .typewrite(data-period="2000",data-type='["взноса и справок"]')
+                                    .attention-container__header(data-info="Подбор автомобилей под ваши нужды") Подбор автомобилей под
+                                        .typewrite(data-period="2000",data-type='[" ваши нужды"]')
                                     .attention-container-row 
                                         a(href="#banks").attention-container__button--expand Подробнее
                                         a(href="#form").attention-container__button--apply Заполнить форму
                                 img(src="./assets/images/content/slide4.png", alt="",style="transform: scaleX(-1) ").greeting-image
+                    .swiper-slide.greeting-basic
+                            .greeting-slide 
+                                .attention-container 
+                                    .attention-container__header(data-info="Сотрудничество") Приглашаем к сотрудничеству 
+                                        .typewrite(data-period="2000",data-type='["ценных партнеров"]')
+                                    .attention-container-row 
+                                        a(href="#banks").attention-container__button--expand Подробнее
+                                        a(href="#form").attention-container__button--apply Заполнить форму
+                                img(src="./assets/images/content/slide2.png", alt="",style="transform: scaleX(-1) ").greeting-image
                     
-                .swiper-navigation 
-                    .swiper-button--prev.greeting-prev
-                    .swiper-button--next.greeting-next
+                //- .swiper-navigation 
+                //-     .swiper-button--prev.greeting-prev
+                //-     .swiper-button--next.greeting-next
+                .swiper-pagination.home-pagination

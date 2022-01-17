@@ -3,12 +3,8 @@ main.main.main-home
     section.form-section#form
         .section-header РАССЧИТАЙТЕ АВТОКРЕДИТ И ЗАПОЛНИТЕ АНКЕТУ
         .section-container
-            .application-type 
-            form(action="", method="post").application-form
-                input#(type="text", name="hello")
-                input#(type="text", name="yes")
-                input#(type="text", name="haha")
-                input#(type="text", name="hehe") 
+            include form.pug
+                
     section.advertisment-section
     section.banks-section
         .section-header Банки-Партнеры
