@@ -1,26 +1,30 @@
 form(action="", method="post").application-form
-    .first-screen.form-screen.screen--hide#firstScreen
+    .first-screen.form-screen.screen--show#firstScreen
         .screen-header Вы уже определились, какой автомобиль хотите? 
-        .application-button.application-button--yes Да
-        .application-button.application-button--no Нет
+        .application-button.application-button--yes#definedForm Да
+        .application-button.application-button--no#detailedForm Нет
         .application-form__navigation 
-            .navigation__progress-bar 
-        .navigation-controller    
-            .form-navigation__button.form-navigation__button--prev.form-navigation__button--disabled 
-            .form-navigation__button.form-navigation__button--next#secondScreenButton
+            .navigation__progress-bar.navigation__progress-bar--basic  
+        //- .navigation-controller    
+        //-     .form-navigation__button.form-navigation__button--prev.form-navigation__button--disabled 
+        //-     .form-navigation__button.form-navigation__button--next#secondScreenButton
     .second-screen.form-screen.screen--hide#secondScreen 
         .screen-header Выберете пожалуйста тип ТС
-        .application-table 
-            .application-table__option 
+        .application-table
+            input#lightAutoOption(type="radio", name="autoSelect", checked).application-form__radio 
+            label(for="lightAutoOption").application-table__option 
                 img(src="./assets/images/content/slide1.png", alt="").application-image
                 .application-caption Легковой автомобиль
-            .application-table__option 
+            input#motoAutoOption(type="radio", name="autoSelect").application-form__radio
+            label(for="motoAutoOption").application-table__option 
                 img(src="./assets/images/content/slide2.png", alt="").application-image
                 .application-caption Мотоцикл
-            .application-table__option 
+            input#specAutoOption(type="radio", name="autoSelect").application-form__radio
+            label(for="specAutoOption").application-table__option 
                 img(src="./assets/images/content/slide3.png", alt="").application-image
                 .application-caption Спецтехника
-            .application-table__option
+            input#otherAutoOption(type="radio", name="autoSelect").application-form__radio
+            label(for="otherAutoOption").application-table__option
                 img(src="./assets/images/content/slide4.png", alt="").application-image
                 .application-caption Другое
         .application-form__navigation 
@@ -32,7 +36,8 @@ form(action="", method="post").application-form
         .screen-header Укажите сумму кредита
         .application-slider 
             .slider--debt#sliderDebt
-            input#debtInput(type="text", name="debtInput").application-input--debt
+            input#debtInput(type="text", name="debtInput").application-input
+            span.input--income руб.
         .application-form__navigation 
             .navigation__progress-bar.navigation__progress-bar--40p 
         .navigation-controller    
@@ -42,19 +47,43 @@ form(action="", method="post").application-form
         .screen-header Укажите срок кредитования
         .application-slider 
             .slider--debt#sliderTime
-            input#timeInput(type="text", name="debtInput").application-input--debt
+            input#timeInput(type="text", name="debtInput").application-input
         .application-form__navigation 
             .navigation__progress-bar.navigation__progress-bar--60p 
         .navigation-controller    
             .form-navigation__button.form-navigation__button--prev#thirdScreenButton 
             .form-navigation__button.form-navigation__button--next#fifthScreenButton
-    .fifth-screen.form-screen.screen--show#fifthScreen 
+    .fifth-screen.form-screen.screen--hide#fifthScreen 
         .screen-header Укажите ваш ежемесячный доход
         .application-slider 
             .slider--debt#sliderIncome
-            input#incomeInput(type="text", name="debtInput").application-input--debt
+            input#incomeInput(type="text", name="debtInput").application-input
+            span.input--income руб.
         .application-form__navigation 
-            .navigation__progress-bar.navigation__progress-bar--60p 
+            .navigation__progress-bar.navigation__progress-bar--80p 
         .navigation-controller    
-            .form-navigation__button.form-navigation__button--prev#thirdScreenButton 
-            .form-navigation__button.form-navigation__button--next#fifthScreenButton
+            .form-navigation__button.form-navigation__button--prev#fourthScreenButton 
+            .form-navigation__button.form-navigation__button--next#sixthScreenButton
+    .sixth-screen.form-screen.screen--hide#sixthScreen 
+        .screen-header Укажите первоначальный взнос
+        .application-slider 
+            .slider--debt#sliderInvest
+            input#investInput(type="text", name="debtInput").application-input
+            span.input--income руб.
+        .application-form__navigation 
+            .navigation__progress-bar.navigation__progress-bar--95p 
+        .navigation-controller    
+            .form-navigation__button.form-navigation__button--prev#fifthScreenButton 
+            .form-navigation__button.form-navigation__button--next#finalScreenButton
+    .sixth-screen.form-screen.screen--hide#finalScreen 
+        .screen-header Оставьте ваши контактные данные 
+        label(for="userName").submit-label Имя
+            input#userName(type="text", name="userName", placeholder="Ваше имя", required).submit-input
+        label(for="userPhone").submit-label Телефон
+            input#userPhone(type="text", name="userPhone", placeholder="Ваш номер телефона", required).submit-input
+        button(type="submit").submit-button Оставить заявку
+        .application-form__navigation 
+            .navigation__progress-bar.navigation__progress-bar--100p 
+        .navigation-controller    
+            .form-navigation__button.form-navigation__button--prev#sixthScreenButton 
+            .form-navigation__button.form-navigation__button--next.form-navigation__button--disabled#finalScreenButton
