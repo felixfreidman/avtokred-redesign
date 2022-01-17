@@ -1,82 +1,23 @@
-doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="style.min.css")
-        link(rel="shortcut icon", href="./assets/images/content/favicon.ico", type="image/x-icon")
-        link(href="https://unpkg.com/aos@2.3.1/dist/aos.css", rel="stylesheet")
-        title АВТОКРЕД
-    body
-        .wrapper
-            .wrapper-content
-                include header.pug
-                main.main-content
-                    .welcome-section
-                        .welcome-header(data-aos="fade-up") КРЕДИТ НА ПОКУПКУ
-                            .typewrite(data-period="2000",data-type='["АВТОМОБИЛЯ"]')
-                        .button-activation#formActivation Получить автомобиль мечты
-                    .main-banner 
-                        .banner-text(data-aos="fade-up") Подберем для вас самое выгодное предложение от 16 банков-партнеров в Иркутске
-                    .main-section 
-                            .section-row 
-                                .section-block--link.link-cases#formExpand 
-                                    .section-container
-                                        .section-name(data-aos="fade-up") Заполнить анкету
-                                    .section-block--expansion
-                                        form(action="", method="post").application-form
-                                             
-                            .section-row 
-                                .section-block--link.link-more#banksExpand
-                                    .section-container
-                                        .section-name(data-aos="fade-up") Банки-Партнеры
-                                        span(data-aos="fade-up").section-link#banksLink Узнать больше
-                                    .section-block--expansion#banksWindow
-                                        .swiper.swiper-home#bankSwiper
-                                            .swiper-wrapper 
-                                                .swiper-slide 
-                                                    img(src="./assets/images/content/background.jpg", alt="")
-                                                .swiper-slide
-                                                    img(src="./assets/images/content/background.jpg", alt="") 
-                                                .swiper-slide
-                                                    img(src="./assets/images/content/background.jpg", alt="") 
-                                                .swiper-slide
-                                                    img(src="./assets/images/content/background.jpg", alt="") 
-                                                .swiper-slide
-                                                    img(src="./assets/images/content/background.jpg", alt="") 
-                                            .swiper-container
-                                                .swiper-pagination
-                                                .swiper-controller
-                                                    .swiper-button-prev--home.bank-prev
-                                                    .swiper-button-next--home.bank-next
-                                                
-                                
-                            .section-row
-                                .section-block--link.link-row#whyusExpand
-                                    .section-container
-                                        .section-name(data-aos="fade-up") Почему мы?
-                                        span(data-aos="fade-up").section-link#whyusLink Узнать больше
-                                    .section-block--expansion#whyusWindow
-                                        .swiper.swiper-home#whyusSwiper
-                                                .swiper-wrapper 
-                                                    .swiper-slide 
-                                                        img(src="./assets/images/content/background.jpg", alt="")
-                                                    .swiper-slide
-                                                        img(src="./assets/images/content/background.jpg", alt="") 
-                                                    .swiper-slide
-                                                        img(src="./assets/images/content/background.jpg", alt="") 
-                                                    .swiper-slide
-                                                        img(src="./assets/images/content/background.jpg", alt="") 
-                                                    .swiper-slide
-                                                        img(src="./assets/images/content/background.jpg", alt="") 
-                                                .swiper-container
-                                                    .swiper-pagination
-                                                    .swiper-controller
-                                                        .swiper-button-prev--home.whyus-prev
-                                                        .swiper-button-next--home.whyus-next
-                               
 
-                            
-                    
-                include footer.pug
+include header.pug
+main.main.main-home 
+    section.form-section#form
+        .section-header РАССЧИТАЙТЕ АВТОКРЕДИТ И ЗАПОЛНИТЕ АНКЕТУ
+        .section-container
+            include form.pug
+                
+    section.advertisment-section
+    section.banks-section
+        .section-header Банки-Партнеры
+    section.whyus-section
+        .section-header ПОЧЕМУ СТОИТ ОБРАТИТЬСЯ ИМЕННО К НАМ?
+    //- Для всяких квизов
+    section.attention-section 
+    //- Форма для вопросов внизу
+    section.consultation-section 
+    section.feedback-section
+        .section-header ОТЗЫВЫ НАШИХ КЛИЕНТОВ
+    section.company-section
+        .section-header НЕМНОГО О НАШЕЙ КОМПАНИИ
+    section.map-section#contact
+include footer.pug

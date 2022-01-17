@@ -1,9 +1,71 @@
-header.header 
-    .logo
-        img(src="./assets/images/content/Logo.svg", alt="Logo Image")
-    .navigation 
-        a(href="./index.html", target="_self").navigation-link Главная
-        a(href="./cases.html", target="_self").navigation-link Проекты
-        a(href="./about.html", target="_self").navigation-link О нас
-        a(href="./contact.html", target="_self").navigation-link Напишите нам
-    
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="shortcut icon", href="./assets/images/content/favicon.ico", type="image/x-icon")
+        link(rel="stylesheet", href="./style.min.css")
+        link(rel="stylesheet", href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css")
+        title Автокред
+    body
+        section.greeting-section 
+            header.header
+                .header-logo
+                    img(src="./assets/images/content/logo2.svg", alt="") 
+                .header-container 
+                    nav.header-navigation 
+                        a.header-link(href="#form") Оформить кредит
+                        a.header-link(href="#") Клиенту
+                        a.header-link(href="#") О Компании
+                        a.header-link(href="#contacts") Контакты 
+                    .header-contact-info
+                        a.header-phone(href="tel:+78006002515") 8 800 600-25-15 
+                        .header-social 
+                            a(href="https://vk.com/felixfreidman").social-link 
+                                img(src="./assets/images/content/vk.svg", alt="VK Logo")
+                            a(href="https://instagram.com/freidman.creator").social-link 
+                                img(src="./assets/images/content/instagram.svg", alt="Instagram Logo", style="width: 80%")
+            .swiper.greeting-swiper#greetingSwipper
+                .swiper-wrapper
+                    .swiper-slide.greeting-basic
+                        .greeting-slide 
+                            .attention-container 
+                                .attention-container__header(data-info="Кредит на покупку легкового автомобиля") Кредит на покупку 
+                                    .typewrite(data-period="2000",data-type='["легкового автомобиля"]')
+                                .attention-container-row 
+                                    a(href="#banks").attention-container__button--expand Подробнее
+                                    a(href="#form").attention-container__button--apply Заполнить форму
+                            img(src="./assets/images/content/slide1.png", alt="").greeting-image
+                    .swiper-slide.greeting-basic
+                            .greeting-slide 
+                                .attention-container 
+                                    .attention-container__header(data-info="Кредит на покупку специальной техники") Кредит на покупку 
+                                        .typewrite(data-period="2000",data-type='["специальной техники"]')
+                                    .attention-container-row 
+                                        a(href="#banks").attention-container__button--expand Подробнее
+                                        a(href="#form").attention-container__button--apply Заполнить форму
+                                img(src="./assets/images/content/slide3.png", alt="").greeting-image
+                    .swiper-slide.greeting-basic
+                            .greeting-slide 
+                                .attention-container 
+                                    .attention-container__header(data-info="Подбор автомобилей под ваши нужды") Подбор автомобилей под
+                                        .typewrite(data-period="2000",data-type='[" ваши нужды"]')
+                                    .attention-container-row 
+                                        a(href="#banks").attention-container__button--expand Подробнее
+                                        a(href="#form").attention-container__button--apply Заполнить форму
+                                img(src="./assets/images/content/slide4.png", alt="",style="transform: scaleX(-1) ").greeting-image
+                    .swiper-slide.greeting-basic
+                            .greeting-slide 
+                                .attention-container 
+                                    .attention-container__header(data-info="Сотрудничество") Приглашаем к сотрудничеству 
+                                        .typewrite(data-period="2000",data-type='["ценных партнеров"]')
+                                    .attention-container-row 
+                                        a(href="#banks").attention-container__button--expand Подробнее
+                                        a(href="#form").attention-container__button--apply Заполнить форму
+                                img(src="./assets/images/content/slide2.png", alt="",style="transform: scaleX(-1) ").greeting-image
+                    
+                //- .swiper-navigation 
+                //-     .swiper-button--prev.greeting-prev
+                //-     .swiper-button--next.greeting-next
+                .swiper-pagination.home-pagination

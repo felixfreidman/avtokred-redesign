@@ -1,142 +1,83 @@
-var TxtType = function(el, toRotate, period) {
-    this.toRotate = toRotate;
-    this.el = el;
-    this.loopNum = 0;
-    this.period = parseInt(period, 10) || 2000;
-    this.txt = "";
-    this.tick();
-    this.isDeleting = false;
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+
+const allNextButtons = document.querySelectorAll(
+    ".form-navigation__button--next"
+);
+let detailedFormObject = {
+    type: "",
+    credit: "",
+    time: "",
+    income: "",
+    invest: "",
+    userName: "",
+    userPhone: "",
 };
+allNextButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        let buttonId = button.id;
+        buttonId = buttonId.replace("Button", "");
+        let parentId = button.parentNode.parentNode.id;
+        document.getElementById(parentId).classList.toggle("screen--hide");
+        document.getElementById(parentId).classList.toggle("screen--show");
+        document.getElementById(buttonId).classList.toggle("screen--hide");
+        document.getElementById(buttonId).classList.toggle("screen--show");
+        const typesInputs = document.querySelectorAll("input[name='autoSelect']");
+        typesInputs.forEach((input) => {
+            if (input.checked) {
+                let checkedOption = input.id;
+                detailedFormObject.type = checkedOption.toString();
+            }
+        });
+        const creditSum = document.getElementById("debtInput").value;
+        console.log(creditSum);
+        detailedFormObject.credit = creditSum.toString();
+        const creditTime = document.getElementById("timeInput").value;
+        detailedFormObject.time = creditTime.toString();
+        const userIncome = document.getElementById("incomeInput").value;
+        detailedFormObject.income = userIncome.toString();
+        const creditInvest = document.getElementById("investInput").value;
+        detailedFormObject.invest = creditInvest.toString();
+        console.log(detailedFormObject);
+    });
+});
+const allPrevButtons = document.querySelectorAll(
+    ".form-navigation__button--prev"
+);
+allPrevButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        let buttonId = button.id;
+        buttonId = buttonId.replace("Button", "");
+        let parentId = button.parentNode.parentNode.id;
+        document.getElementById(parentId).classList.toggle("screen--hide");
+        document.getElementById(parentId).classList.toggle("screen--show");
+        document.getElementById(buttonId).classList.toggle("screen--hide");
+        document.getElementById(buttonId).classList.toggle("screen--show");
+    });
+});
 
-TxtType.prototype.tick = function() {
-    var i = this.loopNum % this.toRotate.length;
-    var fullTxt = this.toRotate[i];
+const detailedButton = document.getElementById("detailedForm");
+detailedButton.addEventListener("click", () => {
+    document.getElementById("firstScreen").classList.toggle("screen--hide");
+    document.getElementById("firstScreen").classList.toggle("screen--show");
+    document.getElementById("secondScreen").classList.toggle("screen--hide");
+    document.getElementById("secondScreen").classList.toggle("screen--show");
+});
 
-    if (this.isDeleting) {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
-    } else {
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
-    }
-
-    this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
-
-    var that = this;
-    var delta = 200 - Math.random() * 100;
-
-    if (this.isDeleting) {
-        delta /= 2;
-    }
-
-    if (!this.isDeleting && this.txt === fullTxt) {
-        delta = this.period;
-        this.isDeleting = true;
-    } else if (this.isDeleting && this.txt === "") {
-        this.isDeleting = false;
-        this.loopNum++;
-        delta = 500;
-    }
-
-    setTimeout(function() {
-        that.tick();
-    }, delta);
-};
-
-window.onload = function() {
-    var elements = document.getElementsByClassName("typewrite");
-    for (var i = 0; i < elements.length; i++) {
-        var toRotate = elements[i].getAttribute("data-type");
-        var period = elements[i].getAttribute("data-period");
-        if (toRotate) {
-            new TxtType(elements[i], JSON.parse(toRotate), period);
+const userNameInput = document.getElementById("userName");
+const userPhoneInput = document.getElementById("userPhone");
+$(document).ready(function() {
+    $(".submit-button").addClass("form-navigation__button--disabled");
+    $("#userName").keyup(function() {
+        console.log("yes");
+        if ($(this).val().length != 0 && $("#userPhone").val().length != 0) {
+            $(".submit-button").removeClass("form-navigation__button--disabled");
         }
-    }
-    // INJECT CSS
-    var css = document.createElement("style");
-    css.type = "text/css";
-    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-    document.body.appendChild(css);
-};
-
-AOS.init({
-    startEvent: "DOMContentLoaded",
-});
-
-// Main Menu Section
-
-// const dinamicMenu = document.getElementById("wrapperContent");
-// const menuFirstRow = document.getElementById("navigationFirstRow");
-// const menuSecondRow = document.getElementById("navigationSecondRow");
-// const navigationContainer = document.getElementById("navigationContainer");
-// const menuMiniRow = document.getElementById("navigationRowMini");
-// const formButton = document.getElementById("formButton");
-// const formContainer = document.getElementById("formContainer");
-// const aboutButton = document.getElementById("aboutButton");
-// const aboutContainer = document.getElementById("aboutContainer");
-// const banksButton = document.getElementById("banksButton");
-// const banksContainer = document.getElementById("banksContainer");
-// const whyusButton = document.getElementById("whyusButton");
-// const whyusContainer = document.getElementById("whyusContainer");
-// const faqButton = document.getElementById("faqButton");
-// const formActivationButton = document.getElementById("formActivation");
-// formButton.addEventListener("click", () => {
-//     if (!formButton.classList.contains("formExpansion")) {
-//         formButton.classList.add("formExpansion");
-//         formContainer.classList.add("formContainerExpansion");
-//         menuSecondRow.classList.add("rowResize");
-//     }
-// });
-
-// formActivationButton.addEventListener("click", () => {
-//     if (!formButton.classList.contains("formExpansion")) {
-//         formButton.classList.add("formExpansion");
-//         formContainer.classList.add("formContainerExpansion");
-//         menuSecondRow.classList.add("rowResize");
-//     }
-//     formButton.scrollIntoView({
-//         behavior: "smooth",
-//         block: "start",
-//         inline: "nearest",
-//     });
-// });
-// aboutButton.addEventListener("click", () => {
-//     if (!aboutContainer.classList.contains("aboutExpansion")) {
-//         aboutButton.classList.add("buttonModdif");
-//         aboutContainer.classList.add("aboutExpansion");
-//         navigationContainer.classList.add("containerResize");
-//         dinamicMenu.setAttribute(
-//             "style",
-//             `height: ${dynamicMenu.offsetHeight + aboutContainer.offsetHeight}`
-//         );
-//     }
-// });
-
-// banksButton.addEventListener("click", () => {
-//     if (!banksButton.classList.contains("banksExpansion")) {
-//         banksButton.classList.add("banksExpansion");
-//         banksContainer.classList.add("banksContainerExpansion");
-//         navigationContainer.classList.add("rowResizeBanks");
-//         menuMiniRow.classList.add("miniRowResize");
-//     }
-// });
-
-// whyusButton.addEventListener("click", () => {
-//     if (!whyusButton.classList.contains("miniCardExpansion")) {
-//         whyusButton.classList.add("miniCardExpansion");
-//         whyusContainer.classList.add("miniCardContainerExpansion");
-//         faqButton.classList.add("miniCardResize");
-//         menuMiniRow.classList.add("miniRowCardResize");
-//     }
-// });
-
-const banksExpandButton = document.getElementById("banksExpand");
-banksExpandButton.addEventListener("click", () => {
-    document.getElementById("banksLink").style.display = "none";
-    document.getElementById("banksWindow").classList.add("homeWindowExpanded");
-    banksExpandButton.classList.add("homeParentExpanded");
-});
-const whyusExpandButton = document.getElementById("whyusExpand");
-whyusExpandButton.addEventListener("click", () => {
-    document.getElementById("whyusLink").style.display = "none";
-    document.getElementById("whyusWindow").classList.add("homeWindowExpanded");
-    whyusExpandButton.classList.add("homeParentExpanded");
-});
+    });
+    $("#userPhone").keyup(function() {
+        console.log("yes");
+        if ($(this).val().length != 0 && $("#userName").val().length != 0) {
+            $(".submit-button").removeClass("form-navigation__button--disabled");
+        }
+    });
