@@ -1,4 +1,3 @@
-
 // // header-swiper
 let menu = [];
 let HeadersArray = document.querySelectorAll(".attention-container__header");
@@ -200,3 +199,4 @@ $(document).ready(function() {
     $("#investInput").change(function() {
         $("#sliderInvest").slider("value", $(this).val());
     });
+});

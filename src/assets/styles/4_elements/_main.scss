@@ -20,7 +20,6 @@ a {
             height: 100%;
         }
     }
-
 }
 
 .greeting-basic {
@@ -37,7 +36,6 @@ a {
     justify-content: flex-start;
     align-items: center;
     .attention-container {
-
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -72,7 +70,6 @@ a {
         background-color: rgba($color: #ff0505, $alpha: 1.0);
         min-width: 104px;
         color: #fff;
-
         padding: 20px 10px;
         border-radius: 8px;
         font-weight: 600;
@@ -81,7 +78,6 @@ a {
         &:hover {
             transform: scale(1.1);
         }
-
     }
 }
 
@@ -186,10 +182,8 @@ a {
         display: flex;
         flex-direction: column;
         width: 100%;
-
         align-items: flex-start;
         justify-content: flex-start;
-
     }
     .section-header {
         text-transform: uppercase;
@@ -248,7 +242,6 @@ a {
             width: 80%;
         }
     }
-
     .bullet-header {
         color: #0b1f35;
         font-size: 18px;
@@ -263,142 +256,3 @@ a {
     align-items: center;
     justify-content: center;
 }
-
-    
-    // Menu Navigation Expansion Section
-    .section-block--expansion {
-        width: 80%;
-        height: 100vh;
-    }
-    
-    .homeWindowExpanded {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .swiper-home {
-        width: 100%;
-        height: 60%;
-        position: relative;
-        overflow: hidden;
-        .swiper-wrapper {
-            height: 80%;
-        }
-        .swiper-slide {
-            height: 100%;
-        }
-    }
-    
-    .swiper-controller {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        justify-content: flex-end;
-    }
-    
-    .swiper-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    
-    .swiper-pagination {
-        position: relative;
-        display: flex;
-        .swiper-pagination-bullet {
-            width: 40px;
-            height: 10px;
-            background-color: rgba($color: #fff, $alpha: 0.5);
-            border-radius: 0px;
-            margin-right: 20px;
-        }
-        .swiper-pagination-bullet {
-            width: 40px;
-            height: 10px;
-            background-color: rgba($color: #fff, $alpha: 1);
-            border-radius: 0px;
-        }
-    }
-    
-    .swiper-button-prev--home,
-    .swiper-button-next--home {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        border: 3px solid #fff;
-        position: relative;
-        cursor: pointer;
-    }
-    
-    .swiper-button-prev--home {
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            margin-top: auto;
-            margin-bottom: auto;
-            left: 3px;
-            right: 0;
-            margin-left: auto;
-            margin-right: auto;
-            width: 12px;
-            height: 12px;
-            border-bottom: 3px solid #fff;
-            border-left: 3px solid #fff;
-            transform: rotate(45deg);
-        }
-    }
-    
-    .swiper-button-next--home {
-        margin-left: 40px;
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            margin-top: auto;
-            margin-bottom: auto;
-            left: 0;
-            right: 3px;
-            margin-left: auto;
-            margin-right: auto;
-            width: 12px;
-            height: 12px;
-            border-bottom: 3px solid #fff;
-            border-right: 3px solid #fff;
-            transform: rotate(-45deg);
-        }
-    }
-    
-    .section-container {
-        height: 350px !important;
-        flex: 350px 0 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .homeParentExpanded {
-        min-height: calc(100vh + 350px) !important;
-        max-height: calc(100vh + 350px) !important;
-        transition: min-height 0.3s ease;
-    }
-    
-    // #formExpand {
-    //     width: 100%;
-    //     min-height: 200vh;
-    //     max-height: 200vh;
-    //     height: fit-content;
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: space-between;
-    //     flex-direction: column;
-    //     transition: height 0.3s ease;
-    //     overflow: hidden;
-    //     .section-block--expansion {
-    //         df
-    //     }
-    // }
